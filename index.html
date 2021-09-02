@@ -1,0 +1,30 @@
+<!DOCTYPE html><!--Declaracion del tipo HTML-->
+<html><!--Inicio de la pagina-->
+    <head><!--Cabecero-->
+    </head><!--Cierre del cabecero-->
+    <body><!--Cuerpo-->
+<html><!--Inicio de la pagina-->
+    <title>Conversor</title><!--titulo-->
+    <body><!--Cuerpo-->
+        <p><!--Parrafo-->
+            <p>Pesos</p><!--Parrafo con texto-->
+            <input id="inputPesos" type="number" oninput="pesosDolares(this.value)" onchange="pesosDolares(this.value)"><!--Caja de tipo numero que recibe datos del usuario y de un script-->
+        </p><!--Cierre del parrafo-->
+        <p><!--Parrafo-->
+            <p>Dolares</p><!--Parrafo con texto-->
+            <input id="inputDolares" type="number" oninput="dolaresPesos(this.value)" onchange="dolaresPesos(this.value)"><!--Caja de tipo numero que recibe datos del usuario y de un script-->
+        </p><!--Cierre del parrafo-->
+    </body><!--Cierre del cuerpo-->
+</html><!--Cierre de la pagina-->
+<script type="text/javascript">//Inicio de un script en lenguaje js
+    function pesosDolares(valNum) {//Funcion que recibe el valor dado por el usuario
+        console.log(valNum)//Muestra en consola el valor ingresado por el usuario
+        document.getElementById("inputDolares").value=valNum/20;//Realiza la operacion del valor dado por el usuario y lo divide entre 20
+    }
+    function dolaresPesos(valNum) {//Funcion que recibe el valor dado por el usuario
+        //console.log(valNum)//Muestra en consola el valor ingresado por el usuario
+        document.getElementById("inputPesos").value=valNum*20;//Realiza la operacion del valor dado por el usuario y lo multiplica por 20
+    }
+    </script><!--Cierre del script-->
+    </body><!--Cierre del cuerpo-->
+</html><!--Cierre de la pagina-->
